@@ -108,9 +108,11 @@ function Home() {
         <p>Nenhum chamado encontrado.</p>
       )}
 
-      {chamados.map((chamado) => (
-        <CardChamado key={chamado.id} chamado={chamado} />
-      ))}
+     <div className="lista">
+        {chamados.map((chamado) => (
+          <CardChamado key={chamado.id} chamado={chamado} />
+        ))}
+      </div>
     </div>
   )
 }

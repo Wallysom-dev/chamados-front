@@ -1,16 +1,22 @@
-# React + Vite
+# Diário de Chamados
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Front-end do sistema de chamados de manutenção do IFRN, feito com React + Vite.
 
-Currently, two official plugins are available:
+## O que faz
+- Mostra o nome do aluno dono da chave
+- Lista chamados com busca e filtros por status, tipo, local e prioridade
+- Abre, edita e exclui chamados
+- Inicia o atendimento e resolve chamados
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tecnologias
+React, Vite, React Router e Axios
 
-## React Compiler
+## Como rodar
+1. npm install
+2. Crie um arquivo .env com VITE_API_KEY=sua-chave
+3. npm run dev
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tela inicial
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![Tela inicial](prints/home.png)

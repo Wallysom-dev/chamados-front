@@ -1,85 +1,117 @@
 :root {
-  --cor-principal: #2e7d32;
-  --cor-fundo: #f4f6f4;
-  --cor-texto: #1f2a1f;
+  --marinho: #14305a;
+  --laranja: #f28c28;
+  --fundo: #eef1f6;
+  --texto: #1c2433;
+  --borda: #d5dbe6;
 }
 
 * { box-sizing: border-box; }
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: var(--cor-fundo);
-  color: var(--cor-texto);
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
 }
+
+a { color: var(--marinho); }
 
 .cabecalho {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 24px;
-  background: var(--cor-principal);
+  padding: 14px 28px;
+  background: var(--marinho);
   color: white;
+  border-bottom: 4px solid var(--laranja);
 }
-.cabecalho a { color: white; text-decoration: none; font-weight: bold; }
+.cabecalho a { color: white; text-decoration: none; font-weight: bold; font-size: 1.2rem; }
 
-.conteudo { max-width: 800px; margin: 0 auto; padding: 24px; }
+.conteudo { max-width: 1000px; margin: 0 auto; padding: 24px; }
 
 .topo-lista { display: flex; justify-content: space-between; align-items: center; }
-.filtros { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+.filtros { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 20px; }
 .filtros input { flex: 1 1 100%; }
 
 input, select, textarea {
-  padding: 8px;
-  border: 1px solid #bbb;
-  border-radius: 6px;
+  padding: 9px 10px;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
   font-size: 1rem;
+  font-family: inherit;
+  background: white;
+}
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid var(--laranja);
+  border-color: var(--laranja);
+}
+
+.lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
 }
 
 .card {
   display: block;
   background: white;
-  padding: 14px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--borda);
+  border-left: 5px solid var(--marinho);
   color: inherit;
   text-decoration: none;
 }
+.card:hover { box-shadow: 0 4px 12px rgba(20, 48, 90, 0.18); }
+.card h3 { margin: 0 0 6px; color: var(--marinho); }
+.card p { margin: 0 0 10px; font-size: 0.9rem; color: #5a6578; }
 
 .etiqueta {
   display: inline-block;
-  padding: 2px 8px;
-  border-radius: 12px;
+  padding: 3px 10px;
+  border-radius: 999px;
   font-size: 0.8rem;
-  background: #ddd;
+  font-weight: bold;
+  background: #e2e6ee;
   margin-right: 6px;
 }
-.aberto { background: #ffe0b2; }
-.em-andamento { background: #bbdefb; }
-.resolvido { background: #c8e6c9; }
+.aberto { background: #ffe2b8; color: #8a4b00; }
+.em-andamento { background: #cfe0ff; color: #12408f; }
+.resolvido { background: #cdeed6; color: #1b6b36; }
 
 button, .botao {
-  background: var(--cor-principal);
+  background: var(--laranja);
   color: white;
   border: none;
-  padding: 8px 14px;
-  border-radius: 6px;
+  padding: 9px 16px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 1rem;
+  font-weight: bold;
   text-decoration: none;
 }
+button:hover, .botao:hover { filter: brightness(0.92); }
 .perigo { background: #c62828; }
-.cinza { background: #757575; }
+.cinza { background: #6b7587; }
 button:disabled { opacity: 0.5; cursor: not-allowed; }
 
 .acoes { display: flex; gap: 8px; margin: 16px 0; }
-.caixa { background: white; border: 1px solid #ddd; border-radius: 8px; padding: 14px; margin-top: 14px; }
+
+.caixa {
+  background: white;
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 14px;
+}
+.caixa h3 { margin-top: 0; color: var(--marinho); }
 .caixa input, .caixa textarea { width: 100%; margin: 8px 0; }
 
+.formulario { max-width: 600px; }
 .formulario fieldset { border: none; padding: 0; margin: 0; }
-.formulario label { display: block; margin-top: 12px; font-weight: bold; }
+.formulario label { display: block; margin-top: 14px; font-weight: bold; color: var(--marinho); }
 .formulario input, .formulario select, .formulario textarea { width: 100%; margin-top: 4px; }
 
-.erro { color: #c62828; }
-.sucesso { color: #2e7d32; }
+.erro { color: #c62828; font-weight: bold; }
+.sucesso { color: #1b6b36; font-weight: bold; }

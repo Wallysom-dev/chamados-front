@@ -1,0 +1,85 @@
+:root {
+  --cor-principal: #2e7d32;
+  --cor-fundo: #f4f6f4;
+  --cor-texto: #1f2a1f;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background: var(--cor-principal);
+  color: white;
+}
+.cabecalho a { color: white; text-decoration: none; font-weight: bold; }
+
+.conteudo { max-width: 800px; margin: 0 auto; padding: 24px; }
+
+.topo-lista { display: flex; justify-content: space-between; align-items: center; }
+.filtros { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+.filtros input { flex: 1 1 100%; }
+
+input, select, textarea {
+  padding: 8px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.card {
+  display: block;
+  background: white;
+  padding: 14px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  color: inherit;
+  text-decoration: none;
+}
+
+.etiqueta {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  background: #ddd;
+  margin-right: 6px;
+}
+.aberto { background: #ffe0b2; }
+.em-andamento { background: #bbdefb; }
+.resolvido { background: #c8e6c9; }
+
+button, .botao {
+  background: var(--cor-principal);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.perigo { background: #c62828; }
+.cinza { background: #757575; }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.acoes { display: flex; gap: 8px; margin: 16px 0; }
+.caixa { background: white; border: 1px solid #ddd; border-radius: 8px; padding: 14px; margin-top: 14px; }
+.caixa input, .caixa textarea { width: 100%; margin: 8px 0; }
+
+.formulario fieldset { border: none; padding: 0; margin: 0; }
+.formulario label { display: block; margin-top: 12px; font-weight: bold; }
+.formulario input, .formulario select, .formulario textarea { width: 100%; margin-top: 4px; }
+
+.erro { color: #c62828; }
+.sucesso { color: #2e7d32; }
